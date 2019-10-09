@@ -4,7 +4,7 @@ import DateSelector from "./DateSelector";
 
 export default function NasaPhoto(props) {
   const [photoData, setPhotoData] = useState([]);
-  const [dateSelector, setDateSelector] = useState("2019-10-09");
+  const [dateSelector, setDateSelector] = useState("");
 
   useEffect(() => {
     axios
@@ -19,12 +19,17 @@ export default function NasaPhoto(props) {
       });
   }, []);
 
+  console.log(setDateSelector);
+
   return (
     <div className="content-container">
       <h1>{photoData.title}</h1>
       <img className="api-img" src={photoData.hdurl} />
       <p>{photoData.explanation}</p>
-      <DateSelector setDateSelector={props.setStartDate} />
+      <DateSelector
+        dateSelector={dateSelector}
+        setDateSelector={props.onChange}
+      />
     </div>
   );
 }
