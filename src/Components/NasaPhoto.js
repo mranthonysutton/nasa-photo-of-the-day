@@ -3,8 +3,8 @@ import axios from "axios";
 import DateSelector from "./DateSelector";
 
 export default function NasaPhoto(props) {
-  const [photoData, setPhotoData] = useState([]);
-  const [dateSelector, setDateSelector] = useState("");
+  const [photoData, setPhotoData] = useState({});
+  const [dateSelector, setDateSelector] = useState("2019-09-02");
 
   useEffect(() => {
     axios
@@ -17,9 +17,7 @@ export default function NasaPhoto(props) {
       .catch(error => {
         console.log("The data was not returned: ", error);
       });
-  }, []);
-
-  console.log(setDateSelector);
+  }, [dateSelector]);
 
   return (
     <div className="content-container">
@@ -28,7 +26,7 @@ export default function NasaPhoto(props) {
       <p>{photoData.explanation}</p>
       <DateSelector
         dateSelector={dateSelector}
-        setDateSelector={props.onChange}
+        setDateSelector={setDateSelector}
       />
     </div>
   );

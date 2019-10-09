@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const DateSelector = props => {
-  const [dateSelector, setStartDate] = useState("2019-10-09");
+  //   const [dateSelector, setStartDate] = useState("2019-10-01");
 
   return (
     <div className="dateSelectorContainer">
@@ -9,8 +9,8 @@ const DateSelector = props => {
       <input
         className="data-picker"
         type="date"
-        value={dateSelector}
-        onChange={e => setStartDate(e.target.value)}
+        value={props.dateSelector}
+        onChange={e => props.setDateSelector(e.target.value)}
       />
     </div>
   );
