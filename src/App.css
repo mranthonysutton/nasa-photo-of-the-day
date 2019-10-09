@@ -63,6 +63,13 @@ body {
   width: 65%;
 }
 
+.dateSelector-button {
+  padding: 10px;
+  margin: 1% 0;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
