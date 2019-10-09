@@ -7,7 +7,7 @@ export default function NasaPhoto() {
   useEffect(() => {
     axios
       .get(
-        "https://api.nasa.gov/planetary/apod?api_key=70qZqLQhWqT4kF6rK4W2FDHLgzgveqdjc7oO8LW9"
+        "https://api.nasa.gov/planetary/apod?api_key=70qZqLQhWqT4kF6rK4W2FDHLgzgveqdjc7oO8LW9&date=2019-10-09"
       )
       .then(response => {
         setPhotoData(response.data);
