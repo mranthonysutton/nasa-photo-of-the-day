@@ -19,8 +19,8 @@ export default function NasaPhoto() {
 
   return (
     <div className="content-container">
-      <h3>{photoData.title}</h3>
-      <img src={photoData.hdurl} />
+      <h1>{photoData.title}</h1>
+      <img className="api-img" src={photoData.hdurl} />
       <p>{photoData.explanation}</p>
     </div>
   );
