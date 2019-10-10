@@ -11,6 +11,7 @@ const DateSelector = props => {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    color: #282c34;
   `;
 
   const StyledH4 = styled.div`

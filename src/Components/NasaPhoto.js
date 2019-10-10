@@ -27,7 +27,7 @@ export default function NasaPhoto(props) {
   `;
 
   const PhotoTitle = styled.h1`
-    font-size: 4rem;
+    font-size: 6rem;
     font-family: "Indie Flower", cursive;
     color: #282c34;
   `;
@@ -44,6 +44,7 @@ export default function NasaPhoto(props) {
     font-size: 1.8rem;
     width: 65%;
     color: #282c34;
+    line-height: 2.5rem;
   `;
 
   const [photoData, setPhotoData] = useState({});
