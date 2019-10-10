@@ -15,6 +15,37 @@ export default function NasaPhoto(props) {
     return today;
   };
 
+  // Styled Components
+  const PhotoContainer = styled.div`
+    margin: 2% 0;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ccc;
+  `;
+
+  const PhotoTitle = styled.h1`
+    font-size: 4rem;
+    font-family: "Indie Flower", cursive;
+    color: #282c34;
+  `;
+
+  const APIImage = styled.img`
+    height: auto;
+    width: 70%;
+    border-radius: 20px;
+  `;
+
+  const PhotoDescription = styled.p`
+    padding: 0 1%;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.8rem;
+    width: 65%;
+    color: #282c34;
+  `;
+
   const [photoData, setPhotoData] = useState({});
   const [dateSelector, setDateSelector] = useState(todayDate());
 
@@ -32,14 +63,14 @@ export default function NasaPhoto(props) {
   }, [dateSelector]);
 
   return (
-    <div className="content-container">
-      <h1>{photoData.title}</h1>
-      <img className="api-img" src={photoData.hdurl} />
-      <p>{photoData.explanation}</p>
+    <PhotoContainer>
+      <PhotoTitle>{photoData.title}</PhotoTitle>
+      <APIImage src={photoData.hdurl} />
+      <PhotoDescription>{photoData.explanation}</PhotoDescription>
       <DateSelector
         dateSelector={dateSelector}
         setDateSelector={setDateSelector}
       />
-    </div>
+    </PhotoContainer>
   );
 }

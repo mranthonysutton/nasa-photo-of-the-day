@@ -35,56 +35,6 @@ body {
   color: #61dafb;
 }
 
-.content-container {
-  margin: 2% 0;
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #ccc;
-}
-
-.api-img {
-  height: auto;
-  width: 70%;
-  border-radius: 20px;
-}
-
-.content-container h1 {
-  font-size: 4rem;
-  font-family: "Indie Flower", cursive;
-}
-
-.content-container p {
-  padding: 0 1%;
-  font-family: "Quicksand", sans-serif;
-  font-size: 1.8rem;
-  width: 65%;
-}
-
-.dateSelectorContainer {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.dateSelectorContainer h4 {
-  font-size: 3rem;
-}
-
-.dateSelectorContainer input {
-  font-size: 2rem;
-  padding: 2rem 8rem;
-  margin-bottom: 2rem;
-}
-
-.dateSelectorContainer button {
-  font-size: 2rem;
-  padding: 1.5rem 8rem;
-  margin-bottom: 2rem;
-  cursor: pointer;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
