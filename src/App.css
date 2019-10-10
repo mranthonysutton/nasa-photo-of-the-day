@@ -1,5 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower|Quicksand&display=swap");
+
+* {
+  max-width: 100%;
+  font-size: 10px;
+}
+
+body {
+  background-color: #282c34;
+}
+
 .App {
   text-align: center;
+  margin: 2% 0;
 }
 
 .App-logo {
